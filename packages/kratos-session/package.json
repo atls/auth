@@ -1,0 +1,28 @@
+{
+  "name": "@atls/kratos-session",
+  "version": "0.0.0",
+  "license": "BSD 3-Clause",
+  "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "yarn app library build",
+    "postpack": "rm -rf dist",
+    "prepack": "yarn run build"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "next": "*"
+  },
+  "dependencies": {
+    "@atls/logger": "^0.0.1",
+    "@ory/kratos-client": "^0.5.5-alpha.4"
+  },
+  "publishConfig": {
+    "access": "public",
+    "main": "dist/index.js",
+    "typings": "dist/index.d.ts"
+  }
+}
