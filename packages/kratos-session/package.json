@@ -11,9 +11,6 @@
     "prepack": "yarn run build",
     "postpack": "rm -rf dist"
   },
-  "resolutions": {
-    "@types/react": "18.2.22"
-  },
   "dependencies": {
     "@atls/logger": "0.0.2",
     "@ory/kratos-client": "0.6.3-alpha.1"
@@ -21,7 +18,7 @@
   "devDependencies": {
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
-    "next": "13.5.1"
+    "next": "13.5.2"
   },
   "publishConfig": {
     "access": "public",
