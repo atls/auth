@@ -1,7 +1,7 @@
+import cookie                                  from 'cookie'
 import { AuthorizationCode }                   from 'simple-oauth2'
 import { ModuleOptions }                       from 'simple-oauth2'
 import { randomBytes }                         from 'crypto'
-import cookie                                  from 'cookie'
 
 import { HydraAuthorizationCodeClientOptions } from './hydra-authorization-code.interfaces'
 import { HydraAuthorizationCodeResult }        from './hydra-authorization-code.interfaces'
