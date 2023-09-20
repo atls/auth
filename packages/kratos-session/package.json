@@ -12,13 +12,13 @@
     "postpack": "rm -rf dist"
   },
   "dependencies": {
-    "@atls/logger": "^0.0.1",
-    "@ory/kratos-client": "^0.5.5-alpha.4"
+    "@atls/logger": "0.0.2",
+    "@ory/kratos-client": "0.6.3-alpha.1"
   },
   "devDependencies": {
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "next": "*"
+    "@types/react": "18.2.22",
+    "@types/react-dom": "18.2.7",
+    "next": "13.5.2"
   },
   "publishConfig": {
     "access": "public",
