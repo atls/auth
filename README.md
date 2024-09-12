@@ -1,3 +1,1 @@
-# template
-
-Template repo
+# Auth
