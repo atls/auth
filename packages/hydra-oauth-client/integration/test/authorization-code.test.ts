@@ -2,11 +2,11 @@
  * @jest-environment node
  */
 
+import { Express }                      from 'express'
+import { Server }                       from 'http'
 import express                          from 'express'
 import getPort                          from 'get-port'
 import supertest                        from 'supertest'
-import { Express }                      from 'express'
-import { Server }                       from 'http'
 
 import { HydraAuthorizationCodeClient } from '../../src'
 
