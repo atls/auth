@@ -178,7 +178,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:4.21.1"],\
           ["get-port", "npm:7.1.0"],\
           ["simple-oauth2", "npm:5.0.0"],\
-          ["supertest", "npm:6.3.3"]\
+          ["supertest", "npm:6.3.4"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -9237,10 +9237,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["supertest", [\
-      ["npm:6.3.3", {\
-        "packageLocation": "../.yarn/berry/cache/supertest-npm-6.3.3-2e2b5bc83a-10.zip/node_modules/supertest/",\
+      ["npm:6.3.4", {\
+        "packageLocation": "../.yarn/berry/cache/supertest-npm-6.3.4-ddb2a7be36-10.zip/node_modules/supertest/",\
         "packageDependencies": [\
-          ["supertest", "npm:6.3.3"],\
+          ["supertest", "npm:6.3.4"],\
           ["methods", "npm:1.1.2"],\
           ["superagent", "npm:8.1.2"]\
         ],\
