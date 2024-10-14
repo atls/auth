@@ -81,11 +81,18 @@ describe('authorization code', () => {
 
     const location = new URL(authenticate.get('location')!)
 
-    const verify = await request.get('/callback').query({
-      state: location.searchParams.get('state'),
-      scope: 'openid offline',
-      code: 'code',
-    })
+    const cookies = authenticate.get('set-cookie')
+
+    if (!cookies) throw new Error('No cookies')
+
+    const verify = await request
+      .get('/callback')
+      .set('Cookie', cookies)
+      .query({
+        state: location.searchParams.get('state'),
+        scope: 'openid offline',
+        code: 'code',
+      })
 
     expect(verify.body.accessToken).toBeDefined()
   })
