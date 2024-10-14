@@ -108,7 +108,7 @@ __metadata:
     cookie: "npm:0.7.2"
     express: "npm:4.21.1"
     get-port: "npm:7.1.0"
-    simple-oauth2: "npm:5.0.0"
+    simple-oauth2: "npm:5.1.0"
     supertest: "npm:6.3.4"
   languageName: unknown
   linkType: soft
@@ -606,17 +606,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hapi/hoek@npm:^10.0.1":
-  version: 10.0.1
-  resolution: "@hapi/hoek@npm:10.0.1"
-  checksum: 10/10d602932c2a10d986ba0e12a11cdc933eca86fc133f3740eba7f916436ea5d536eadedad3b3076b280b5b75e0f237fdb4ba5dcd530e9590ab8e778306c3a9e0
-  languageName: node
-  linkType: hard
-
 "@hapi/hoek@npm:^11.0.2":
   version: 11.0.2
   resolution: "@hapi/hoek@npm:11.0.2"
   checksum: 10/11fcca5370c675de6db584201bf7c13972af519ee2853fa7ded929c725f050ce8b889959e971cef3727f4d8772dc24009c472c3aac5c64dbdf0cc2681dbca10c
+  languageName: node
+  linkType: hard
+
+"@hapi/hoek@npm:^11.0.4":
+  version: 11.0.4
+  resolution: "@hapi/hoek@npm:11.0.4"
+  checksum: 10/0cf1c0dbd203701baccae2a78fc2381a77a2f5d2e46722a99c004ddb7eb7440da1bdeb58605acb1afd3287c940e88eec54ec5a35296bcda11e789092b0e58c36
   languageName: node
   linkType: hard
 
@@ -7034,15 +7034,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"simple-oauth2@npm:5.0.0":
-  version: 5.0.0
-  resolution: "simple-oauth2@npm:5.0.0"
+"simple-oauth2@npm:5.1.0":
+  version: 5.1.0
+  resolution: "simple-oauth2@npm:5.1.0"
   dependencies:
-    "@hapi/hoek": "npm:^10.0.1"
+    "@hapi/hoek": "npm:^11.0.4"
     "@hapi/wreck": "npm:^18.0.0"
     debug: "npm:^4.3.4"
     joi: "npm:^17.6.4"
-  checksum: 10/b3c4818bee9ce784c3f0f50f128728382c2415c425d04ab90ff8dbb7e40dcd55316ce0461eebc0b54870a3e717e1032391faec454632245b22897c17854fa384
+  checksum: 10/84cdaab0566a81152fc5272fa3ed36f91aff9eda2fd5d10ccfe47315c8f8939ecfcad50ad02908c6126f5b79fb19f72b6632ec78b58f6ff95b24099f1cb08354
   languageName: node
   linkType: hard
 

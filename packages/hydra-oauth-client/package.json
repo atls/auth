@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "cookie": "0.7.2",
-    "simple-oauth2": "5.0.0"
+    "simple-oauth2": "5.1.0"
   },
   "devDependencies": {
     "@jest/globals": "29.7.0",

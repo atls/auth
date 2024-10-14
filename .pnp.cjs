@@ -177,7 +177,7 @@ const RAW_RUNTIME_STATE =
           ["cookie", "npm:0.7.2"],\
           ["express", "npm:4.21.1"],\
           ["get-port", "npm:7.1.0"],\
-          ["simple-oauth2", "npm:5.0.0"],\
+          ["simple-oauth2", "npm:5.1.0"],\
           ["supertest", "npm:6.3.4"]\
         ],\
         "linkType": "SOFT"\
@@ -1083,17 +1083,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@hapi/hoek", [\
-      ["npm:10.0.1", {\
-        "packageLocation": "../.yarn/berry/cache/@hapi-hoek-npm-10.0.1-e1b6c69053-10.zip/node_modules/@hapi/hoek/",\
-        "packageDependencies": [\
-          ["@hapi/hoek", "npm:10.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:11.0.2", {\
         "packageLocation": "../.yarn/berry/cache/@hapi-hoek-npm-11.0.2-2d185d47c6-10.zip/node_modules/@hapi/hoek/",\
         "packageDependencies": [\
           ["@hapi/hoek", "npm:11.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:11.0.4", {\
+        "packageLocation": "../.yarn/berry/cache/@hapi-hoek-npm-11.0.4-3a5c13a5d9-10.zip/node_modules/@hapi/hoek/",\
+        "packageDependencies": [\
+          ["@hapi/hoek", "npm:11.0.4"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -8793,11 +8793,11 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["simple-oauth2", [\
-      ["npm:5.0.0", {\
-        "packageLocation": "../.yarn/berry/cache/simple-oauth2-npm-5.0.0-aa50cb130b-10.zip/node_modules/simple-oauth2/",\
+      ["npm:5.1.0", {\
+        "packageLocation": "../.yarn/berry/cache/simple-oauth2-npm-5.1.0-e35b4dc8e4-10.zip/node_modules/simple-oauth2/",\
         "packageDependencies": [\
-          ["simple-oauth2", "npm:5.0.0"],\
-          ["@hapi/hoek", "npm:10.0.1"],\
+          ["simple-oauth2", "npm:5.1.0"],\
+          ["@hapi/hoek", "npm:11.0.4"],\
           ["@hapi/wreck", "npm:18.0.1"],\
           ["debug", "virtual:1b9e2a314c35921e1b14ca2d2c7664f165a5c0f3f02ca1e30357c6546941724b55e5624ce0d5b4790874f2259ae08ae26d9f95d2cdbb84aae50aa451a2a572cd#npm:4.3.7"],\
           ["joi", "npm:17.10.2"]\
