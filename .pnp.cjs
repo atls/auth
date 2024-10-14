@@ -201,7 +201,7 @@ const RAW_RUNTIME_STATE =
           ["@atls/logger", "npm:0.0.2"],\
           ["@ory/kratos-client", "npm:0.6.3-alpha.1"],\
           ["@types/react", "npm:18.2.22"],\
-          ["@types/react-dom", "npm:18.2.7"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["next", "virtual:e7d6f37e7ff1611b4cd5fa2d9f2d4306df6c63ec7a2964db06f0951bc5c218affeb26ea2efcd5ee13dc6fe44d23cf3f57a7e2fac2980f5b14785df50ca002a42#npm:13.5.2"]\
         ],\
         "linkType": "SOFT"\
@@ -2455,10 +2455,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/react-dom", [\
-      ["npm:18.2.7", {\
-        "packageLocation": "../.yarn/berry/cache/@types-react-dom-npm-18.2.7-a20ba684a5-10.zip/node_modules/@types/react-dom/",\
+      ["npm:18.3.1", {\
+        "packageLocation": "../.yarn/berry/cache/@types-react-dom-npm-18.3.1-15935b4e84-10.zip/node_modules/@types/react-dom/",\
         "packageDependencies": [\
-          ["@types/react-dom", "npm:18.2.7"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["@types/react", "npm:18.2.22"]\
         ],\
         "linkType": "HARD"\
@@ -7596,7 +7596,7 @@ const RAW_RUNTIME_STATE =
           ["@swc/helpers", "npm:0.5.2"],\
           ["@types/opentelemetry__api", null],\
           ["@types/react", "npm:18.2.22"],\
-          ["@types/react-dom", "npm:18.2.7"],\
+          ["@types/react-dom", "npm:18.3.1"],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
           ["caniuse-lite", "npm:1.0.30001660"],\
