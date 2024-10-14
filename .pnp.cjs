@@ -169,7 +169,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@atls/hydra-oauth-client", "workspace:packages/hydra-oauth-client"],\
           ["@jest/globals", "npm:29.7.0"],\
-          ["@types/cookie", "npm:0.5.2"],\
+          ["@types/cookie", "npm:0.6.0"],\
           ["@types/express", "npm:4.17.17"],\
           ["@types/node", "npm:20.6.3"],\
           ["@types/simple-oauth2", "npm:5.0.4"],\
@@ -2249,10 +2249,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/cookie", [\
-      ["npm:0.5.2", {\
-        "packageLocation": "../.yarn/berry/cache/@types-cookie-npm-0.5.2-10c0e8320d-10.zip/node_modules/@types/cookie/",\
+      ["npm:0.6.0", {\
+        "packageLocation": "../.yarn/berry/cache/@types-cookie-npm-0.6.0-1f4c3f48f0-10.zip/node_modules/@types/cookie/",\
         "packageDependencies": [\
-          ["@types/cookie", "npm:0.5.2"]\
+          ["@types/cookie", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
