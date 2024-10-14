@@ -24,7 +24,7 @@
     "@types/simple-oauth2": "5.0.7",
     "@types/supertest": "6.0.2",
     "express": "4.21.1",
-    "get-port": "7.0.0",
+    "get-port": "7.1.0",
     "supertest": "6.3.3"
   },
   "publishConfig": {

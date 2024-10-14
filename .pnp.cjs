@@ -176,7 +176,7 @@ const RAW_RUNTIME_STATE =
           ["@types/supertest", "npm:6.0.2"],\
           ["cookie", "npm:0.5.0"],\
           ["express", "npm:4.21.1"],\
-          ["get-port", "npm:7.0.0"],\
+          ["get-port", "npm:7.1.0"],\
           ["simple-oauth2", "npm:5.0.0"],\
           ["supertest", "npm:6.3.3"]\
         ],\
@@ -5700,10 +5700,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["get-port", [\
-      ["npm:7.0.0", {\
-        "packageLocation": "../.yarn/berry/cache/get-port-npm-7.0.0-72b8a92f99-10.zip/node_modules/get-port/",\
+      ["npm:7.1.0", {\
+        "packageLocation": "../.yarn/berry/cache/get-port-npm-7.1.0-4ef4f09d7c-10.zip/node_modules/get-port/",\
         "packageDependencies": [\
-          ["get-port", "npm:7.0.0"]\
+          ["get-port", "npm:7.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\

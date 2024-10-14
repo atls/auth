@@ -107,7 +107,7 @@ __metadata:
     "@types/supertest": "npm:6.0.2"
     cookie: "npm:0.5.0"
     express: "npm:4.21.1"
-    get-port: "npm:7.0.0"
+    get-port: "npm:7.1.0"
     simple-oauth2: "npm:5.0.0"
     supertest: "npm:6.3.3"
   languageName: unknown
@@ -4275,10 +4275,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-port@npm:7.0.0":
-  version: 7.0.0
-  resolution: "get-port@npm:7.0.0"
-  checksum: 10/e9087f62d086bbb70f20c0a208e7cac552679c1426e29e0607eb1b8907a5cc4509337d5971b7f635385cd2a773a14cd21b7d9c3254a2eb5ebeaf5f8fde19fb07
+"get-port@npm:7.1.0":
+  version: 7.1.0
+  resolution: "get-port@npm:7.1.0"
+  checksum: 10/f4d23b43026124007663a899578cc87ff37bfcf645c5c72651e9810ebafc759857784e409fb8e0ada9b90e5c5db089b0ae2f5f6b49fba1ce2e0aff86094ab17d
   languageName: node
   linkType: hard
 
