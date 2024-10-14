@@ -23,7 +23,7 @@
     "@types/node": "20.14.8",
     "@types/simple-oauth2": "5.0.7",
     "@types/supertest": "6.0.2",
-    "express": "4.18.2",
+    "express": "4.21.1",
     "get-port": "7.0.0",
     "supertest": "6.3.3"
   },
