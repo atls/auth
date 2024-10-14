@@ -174,7 +174,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.14.8"],\
           ["@types/simple-oauth2", "npm:5.0.7"],\
           ["@types/supertest", "npm:6.0.2"],\
-          ["cookie", "npm:0.5.0"],\
+          ["cookie", "npm:0.7.2"],\
           ["express", "npm:4.21.1"],\
           ["get-port", "npm:7.1.0"],\
           ["simple-oauth2", "npm:5.0.0"],\
@@ -4037,17 +4037,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cookie", [\
-      ["npm:0.5.0", {\
-        "packageLocation": "../.yarn/berry/cache/cookie-npm-0.5.0-e2d58a161a-10.zip/node_modules/cookie/",\
-        "packageDependencies": [\
-          ["cookie", "npm:0.5.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:0.7.1", {\
         "packageLocation": "../.yarn/berry/cache/cookie-npm-0.7.1-f01524ff99-10.zip/node_modules/cookie/",\
         "packageDependencies": [\
           ["cookie", "npm:0.7.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:0.7.2", {\
+        "packageLocation": "../.yarn/berry/cache/cookie-npm-0.7.2-6ea9ee4231-10.zip/node_modules/cookie/",\
+        "packageDependencies": [\
+          ["cookie", "npm:0.7.2"]\
         ],\
         "linkType": "HARD"\
       }]\
