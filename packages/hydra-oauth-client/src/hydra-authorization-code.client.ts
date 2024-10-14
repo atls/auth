@@ -1,25 +1,29 @@
-import { AuthorizationCode }                   from 'simple-oauth2'
-import { ModuleOptions }                       from 'simple-oauth2'
-import { randomBytes }                         from 'crypto'
-import cookie                                  from 'cookie'
+import type { Request }                             from 'express'
+import type { Response }                            from 'express'
+import type { ModuleOptions }                       from 'simple-oauth2'
 
-import { HydraAuthorizationCodeClientOptions } from './hydra-authorization-code.interfaces'
-import { HydraAuthorizationCodeResult }        from './hydra-authorization-code.interfaces'
-import { AuthenticationStateOptions }          from './hydra-authorization-code.interfaces'
-import { State }                               from './hydra-authorization-code.interfaces'
-import { serializeState }                      from './state.utils'
-import { parseState }                          from './state.utils'
+import type { HydraAuthorizationCodeClientOptions } from './hydra-authorization-code.interfaces.js'
+import type { HydraAuthorizationCodeResult }        from './hydra-authorization-code.interfaces.js'
+import type { AuthenticationStateOptions }          from './hydra-authorization-code.interfaces.js'
+import type { State }                               from './hydra-authorization-code.interfaces.js'
+
+import { AuthorizationCode }                        from 'simple-oauth2'
+import { randomBytes }                              from 'crypto'
+import cookie                                       from 'cookie'
+
+import { serializeState }                           from './state.utils.js'
+import { parseState }                               from './state.utils.js'
 
 export class HydraAuthorizationCodeClient {
   static NONCE_TOKEN = 'anonce'
+
+  logoutUrl: string
 
   private client: AuthorizationCode
 
   private redirectUri: string
 
-  private scope: string[]
-
-  logoutUrl: string
+  private scope: Array<string>
 
   constructor(options: HydraAuthorizationCodeClientOptions) {
     const credentials: ModuleOptions = {
@@ -44,11 +48,11 @@ export class HydraAuthorizationCodeClient {
     this.logoutUrl = new URL('/oauth2/sessions/logout', options.tokenHost).toString()
   }
 
-  getReturnToUrl(req): string | undefined {
+  getReturnToUrl(req: Request): string | undefined {
     const query = req.query || req.params
 
     if (query.return_to) {
-      return query.return_to
+      return query.return_to as string
     }
 
     const referrer = req.get('referrer')
@@ -63,8 +67,8 @@ export class HydraAuthorizationCodeClient {
     return undefined
   }
 
-  setNonce(req, res, nonce: string) {
-    let setCookieHeader = req.get('Set-Cookie') || []
+  setNonce(req: Request, res: Response, nonce: string): void {
+    let setCookieHeader = req.get('Set-Cookie') || ([] as Array<string>)
 
     if (!Array.isArray(setCookieHeader)) {
       setCookieHeader = [setCookieHeader]
@@ -81,7 +85,7 @@ export class HydraAuthorizationCodeClient {
     res.set('Set-Cookie', setCookieHeader)
   }
 
-  getAuthorizationUrl(params = {}) {
+  getAuthorizationUrl(params = {}): string {
     const state = serializeState(params)
 
     return this.client.authorizeURL({
@@ -91,29 +95,34 @@ export class HydraAuthorizationCodeClient {
     })
   }
 
-  authenticate(req, res, options: AuthenticationStateOptions = {}) {
+  authenticate(req: Request, res: Response, options: AuthenticationStateOptions = {}): void {
     const params = {
       ...options,
+      // eslint-disable-next-line react/no-is-mounted
       returnTo: this.getReturnToUrl(req),
       nonce: randomBytes(20).toString('hex'),
     }
 
+    // eslint-disable-next-line react/no-is-mounted
     this.setNonce(req, res, params.nonce)
 
-    return res.redirect(this.getAuthorizationUrl(params))
+    // eslint-disable-next-line react/no-is-mounted
+    res.redirect(this.getAuthorizationUrl(params))
   }
 
-  async verify(req, res): Promise<HydraAuthorizationCodeResult> {
+  async verify(req: Request, res: Response): Promise<HydraAuthorizationCodeResult> {
     const query = req.query || req.params
 
     const tokenConfig = {
       redirect_uri: this.redirectUri,
-      code: query.code,
-      scope: query.scope,
+      code: query.code as string,
+      scope: query.scope as string,
     }
 
+    // @ts-expect-error
     const state: State = parseState(query.state) || {}
 
+    // @ts-expect-error
     const cookies = cookie.parse(req.get('cookie'))
 
     if (state.nonce !== cookies[HydraAuthorizationCodeClient.NONCE_TOKEN]) {

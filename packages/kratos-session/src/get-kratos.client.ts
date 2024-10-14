@@ -1,9 +1,9 @@
 import { Configuration } from '@ory/kratos-client'
 import { PublicApi }     from '@ory/kratos-client'
 
-let kratos
+let kratos: PublicApi
 
-export const getKratosClient = () => {
+export const getKratosClient = (): PublicApi => {
   if (!kratos) {
     kratos = new PublicApi(new Configuration({ basePath: process.env.KRATOS_PUBLIC_URL }))
   }

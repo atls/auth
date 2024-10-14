@@ -1,3 +1,3 @@
-export * from './hydra-authorization-code.interfaces'
-export * from './hydra-authorization-code.client'
-export * from './state.utils'
+export * from './hydra-authorization-code.interfaces.js'
+export * from './hydra-authorization-code.client.js'
+export * from './state.utils.js'

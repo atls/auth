@@ -168,6 +168,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages/hydra-oauth-client/",\
         "packageDependencies": [\
           ["@atls/hydra-oauth-client", "workspace:packages/hydra-oauth-client"],\
+          ["@jest/globals", "npm:29.7.0"],\
           ["@types/cookie", "npm:0.5.2"],\
           ["@types/express", "npm:4.17.17"],\
           ["@types/node", "npm:20.6.3"],\
