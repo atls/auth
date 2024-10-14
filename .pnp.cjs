@@ -172,6 +172,7 @@ const RAW_RUNTIME_STATE =
           ["@types/express", "npm:4.17.17"],\
           ["@types/node", "npm:20.6.3"],\
           ["@types/simple-oauth2", "npm:5.0.4"],\
+          ["@types/supertest", "npm:6.0.2"],\
           ["cookie", "npm:0.5.0"],\
           ["express", "npm:4.18.2"],\
           ["get-port", "npm:7.0.0"],\
@@ -2255,6 +2256,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/cookiejar", [\
+      ["npm:2.1.5", {\
+        "packageLocation": "../.yarn/berry/cache/@types-cookiejar-npm-2.1.5-f36531e52d-10.zip/node_modules/@types/cookiejar/",\
+        "packageDependencies": [\
+          ["@types/cookiejar", "npm:2.1.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/eslint", [\
       ["npm:9.6.1", {\
         "packageLocation": "../.yarn/berry/cache/@types-eslint-npm-9.6.1-31a8cf74e4-10.zip/node_modules/@types/eslint/",\
@@ -2365,6 +2375,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/@types-json5-npm-0.0.29-f63a7916bd-10.zip/node_modules/@types/json5/",\
         "packageDependencies": [\
           ["@types/json5", "npm:0.0.29"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/methods", [\
+      ["npm:1.1.4", {\
+        "packageLocation": "../.yarn/berry/cache/@types-methods-npm-1.1.4-8565dc8af4-10.zip/node_modules/@types/methods/",\
+        "packageDependencies": [\
+          ["@types/methods", "npm:1.1.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2490,6 +2509,30 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../.yarn/berry/cache/@types-stack-utils-npm-2.0.0-8ded8461bc-10.zip/node_modules/@types/stack-utils/",\
         "packageDependencies": [\
           ["@types/stack-utils", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/superagent", [\
+      ["npm:8.1.9", {\
+        "packageLocation": "../.yarn/berry/cache/@types-superagent-npm-8.1.9-673be5c6fd-10.zip/node_modules/@types/superagent/",\
+        "packageDependencies": [\
+          ["@types/superagent", "npm:8.1.9"],\
+          ["@types/cookiejar", "npm:2.1.5"],\
+          ["@types/methods", "npm:1.1.4"],\
+          ["@types/node", "npm:20.6.3"],\
+          ["form-data", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/supertest", [\
+      ["npm:6.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/@types-supertest-npm-6.0.2-1f239669e4-10.zip/node_modules/@types/supertest/",\
+        "packageDependencies": [\
+          ["@types/supertest", "npm:6.0.2"],\
+          ["@types/methods", "npm:1.1.4"],\
+          ["@types/superagent", "npm:8.1.9"]\
         ],\
         "linkType": "HARD"\
       }]\
