@@ -178,7 +178,7 @@ const RAW_RUNTIME_STATE =
           ["express", "npm:5.0.1"],\
           ["get-port", "npm:7.1.0"],\
           ["simple-oauth2", "npm:5.1.0"],\
-          ["supertest", "npm:6.3.4"]\
+          ["supertest", "npm:7.0.0"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -5602,14 +5602,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["formidable", [\
-      ["npm:2.1.2", {\
-        "packageLocation": "../.yarn/berry/cache/formidable-npm-2.1.2-40ba18d67f-10.zip/node_modules/formidable/",\
+      ["npm:3.5.1", {\
+        "packageLocation": "../.yarn/berry/cache/formidable-npm-3.5.1-257e5eab8a-10.zip/node_modules/formidable/",\
         "packageDependencies": [\
-          ["formidable", "npm:2.1.2"],\
+          ["formidable", "npm:3.5.1"],\
           ["dezalgo", "npm:1.0.4"],\
           ["hexoid", "npm:1.0.0"],\
-          ["once", "npm:1.4.0"],\
-          ["qs", "npm:6.11.2"]\
+          ["once", "npm:1.4.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9320,31 +9319,30 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["superagent", [\
-      ["npm:8.1.2", {\
-        "packageLocation": "../.yarn/berry/cache/superagent-npm-8.1.2-44190e1fe9-10.zip/node_modules/superagent/",\
+      ["npm:9.0.2", {\
+        "packageLocation": "../.yarn/berry/cache/superagent-npm-9.0.2-9e8cceb765-10.zip/node_modules/superagent/",\
         "packageDependencies": [\
-          ["superagent", "npm:8.1.2"],\
+          ["superagent", "npm:9.0.2"],\
           ["component-emitter", "npm:1.3.0"],\
           ["cookiejar", "npm:2.1.4"],\
           ["debug", "virtual:1b9e2a314c35921e1b14ca2d2c7664f165a5c0f3f02ca1e30357c6546941724b55e5624ce0d5b4790874f2259ae08ae26d9f95d2cdbb84aae50aa451a2a572cd#npm:4.3.7"],\
           ["fast-safe-stringify", "npm:2.1.1"],\
           ["form-data", "npm:4.0.0"],\
-          ["formidable", "npm:2.1.2"],\
+          ["formidable", "npm:3.5.1"],\
           ["methods", "npm:1.1.2"],\
           ["mime", "npm:2.6.0"],\
-          ["qs", "npm:6.11.2"],\
-          ["semver", "npm:7.6.3"]\
+          ["qs", "npm:6.11.2"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["supertest", [\
-      ["npm:6.3.4", {\
-        "packageLocation": "../.yarn/berry/cache/supertest-npm-6.3.4-ddb2a7be36-10.zip/node_modules/supertest/",\
+      ["npm:7.0.0", {\
+        "packageLocation": "../.yarn/berry/cache/supertest-npm-7.0.0-8060c32e4d-10.zip/node_modules/supertest/",\
         "packageDependencies": [\
-          ["supertest", "npm:6.3.4"],\
+          ["supertest", "npm:7.0.0"],\
           ["methods", "npm:1.1.2"],\
-          ["superagent", "npm:8.1.2"]\
+          ["superagent", "npm:9.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
