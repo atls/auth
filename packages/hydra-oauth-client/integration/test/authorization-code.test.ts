@@ -2,18 +2,26 @@
  * @jest-environment node
  */
 
-import { Express }                      from 'express'
-import { Server }                       from 'http'
+import type { Express }                 from 'express'
+import type { Server }                  from 'http'
+import type { SuperTest }               from 'supertest'
+import type { Test }                    from 'supertest'
+
+import { describe }                     from '@jest/globals'
+import { afterAll }                     from '@jest/globals'
+import { beforeAll }                    from '@jest/globals'
+import { expect }                       from '@jest/globals'
+import { it }                           from '@jest/globals'
 import express                          from 'express'
 import getPort                          from 'get-port'
 import supertest                        from 'supertest'
 
-import { HydraAuthorizationCodeClient } from '../../src'
+import { HydraAuthorizationCodeClient } from '../../src/index.js'
 
 describe('authorization code', () => {
   let app: Express
   let server: Server
-  let request
+  let request: SuperTest<Test>
 
   beforeAll(async () => {
     const port = await getPort()
@@ -27,12 +35,19 @@ describe('authorization code', () => {
       redirectUri: `http://localhost:${port}/callback`,
     })
 
-    app.use('/login', (req, res) => client.authenticate(req, res))
-    app.use('/callback', async (req, res) => res.json(await client.verify(req, res)))
+    app.use('/login', (req, res) => {
+      client.authenticate(req, res)
+    })
+    app.use('/callback', async (req, res): Promise<void> => {
+      res.json(await client.verify(req, res))
+    })
 
-    app.use('/oauth2/token', (req, res) => res.json({ access_token: true }))
+    app.use('/oauth2/token', (req, res) => {
+      res.json({ access_token: true })
+    })
 
     server = app.listen(port)
+    // @ts-expect-error
     request = supertest.agent(server)
   })
 
@@ -43,7 +58,7 @@ describe('authorization code', () => {
   it('authenticate location', async () => {
     const response = await request.get('/login')
 
-    const location = new URL(response.get('location'))
+    const location = new URL(response.get('location')!)
 
     expect(location.searchParams.get('client_id')).toBe('client')
     expect(location.searchParams.get('response_type')).toBe('code')
@@ -52,9 +67,12 @@ describe('authorization code', () => {
   it('authenticate nonce', async () => {
     const response = await request.get('/login')
 
-    const nonce = response
-      .get('set-cookie')
-      .find((item) => item.includes(HydraAuthorizationCodeClient.NONCE_TOKEN))
+    // @ts-expect-error
+    const cookies = response.get('set-cookie') as Array<string>
+
+    if (!cookies) throw new Error('No cookies')
+
+    const nonce = cookies.find((item) => item.includes(HydraAuthorizationCodeClient.NONCE_TOKEN))
 
     expect(nonce).toBeDefined()
   })
@@ -62,13 +80,20 @@ describe('authorization code', () => {
   it('verify', async () => {
     const authenticate = await request.get('/login')
 
-    const location = new URL(authenticate.get('location'))
+    const location = new URL(authenticate.get('location')!)
 
-    const verify = await request.get('/callback').query({
-      state: location.searchParams.get('state'),
-      scope: 'openid offline',
-      code: 'code',
-    })
+    const cookies = authenticate.get('set-cookie')
+
+    if (!cookies) throw new Error('No cookies')
+
+    const verify = await request
+      .get('/callback')
+      .set('Cookie', cookies)
+      .query({
+        state: location.searchParams.get('state'),
+        scope: 'openid offline',
+        code: 'code',
+      })
 
     expect(verify.body.accessToken).toBeDefined()
   })

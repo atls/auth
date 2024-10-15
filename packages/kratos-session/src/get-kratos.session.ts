@@ -1,10 +1,10 @@
-import type { NextApiRequest } from 'next'
+import type { Session }         from '@ory/kratos-client'
+import type { IncomingMessage } from 'http'
+import type { NextApiRequest }  from 'next'
 
-import { Logger }              from '@atls/logger'
-import { Session }             from '@ory/kratos-client'
-import { IncomingMessage }     from 'http'
+import { Logger }               from '@atls/logger'
 
-import { getKratosClient }     from './get-kratos.client'
+import { getKratosClient }      from './get-kratos.client.js'
 
 const logger = new Logger('getKratosSession')
 
@@ -30,11 +30,14 @@ export const getKratosSession = async (
     try {
       const kratos = getKratosClient()
 
+      // @ts-expect-error
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       const { data: session } = await kratos.whoami(cookie, authorization)
 
       if (session) {
         logger.debug(session)
 
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
         return session
       }
     } catch (error) {

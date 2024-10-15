@@ -1,6 +1,6 @@
-import { AccessToken } from 'simple-oauth2'
+import type { AccessToken } from 'simple-oauth2'
 
-export type StateTargetType = 'login' | 'registration' | 'verification' | 'recovery'
+export type StateTargetType = 'login' | 'recovery' | 'registration' | 'verification'
 
 export interface State {
   nonce?: string
@@ -17,7 +17,7 @@ export interface HydraAuthorizationCodeClientOptions {
   clientSecret: string
   tokenHost: string
   redirectUri: string
-  scope?: string[]
+  scope?: Array<string>
 }
 
 export interface HydraAuthorizationCodeResult {
