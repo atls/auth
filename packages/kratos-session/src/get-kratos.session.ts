@@ -4,7 +4,7 @@ import type { NextApiRequest }  from 'next'
 
 import { Logger }               from '@atls/logger'
 
-import { getKratosClient }      from './get-kratos.client'
+import { getKratosClient }      from './get-kratos.client.js'
 
 const logger = new Logger('getKratosSession')
 
