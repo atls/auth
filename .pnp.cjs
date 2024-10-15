@@ -171,7 +171,7 @@ const RAW_RUNTIME_STATE =
           ["@jest/globals", "npm:29.7.0"],\
           ["@types/cookie", "npm:0.6.0"],\
           ["@types/express", "npm:5.0.0"],\
-          ["@types/node", "npm:20.14.8"],\
+          ["@types/node", "npm:22.7.5"],\
           ["@types/simple-oauth2", "npm:5.0.7"],\
           ["@types/supertest", "npm:6.0.2"],\
           ["cookie", "npm:1.0.1"],\
@@ -2399,18 +2399,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@types/node", [\
-      ["npm:20.14.8", {\
-        "packageLocation": "../.yarn/berry/cache/@types-node-npm-20.14.8-e4f4af022f-10.zip/node_modules/@types/node/",\
-        "packageDependencies": [\
-          ["@types/node", "npm:20.14.8"],\
-          ["undici-types", "npm:5.26.5"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:20.6.3", {\
         "packageLocation": "../.yarn/berry/cache/@types-node-npm-20.6.3-7542470c42-10.zip/node_modules/@types/node/",\
         "packageDependencies": [\
           ["@types/node", "npm:20.6.3"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:22.7.5", {\
+        "packageLocation": "../.yarn/berry/cache/@types-node-npm-22.7.5-0428b60a8c-10.zip/node_modules/@types/node/",\
+        "packageDependencies": [\
+          ["@types/node", "npm:22.7.5"],\
+          ["undici-types", "npm:6.19.8"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -9779,10 +9779,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["undici-types", [\
-      ["npm:5.26.5", {\
-        "packageLocation": "../.yarn/berry/cache/undici-types-npm-5.26.5-de4f7c7bb9-10.zip/node_modules/undici-types/",\
+      ["npm:6.19.8", {\
+        "packageLocation": "../.yarn/berry/cache/undici-types-npm-6.19.8-9f12285b7a-10.zip/node_modules/undici-types/",\
         "packageDependencies": [\
-          ["undici-types", "npm:5.26.5"]\
+          ["undici-types", "npm:6.19.8"]\
         ],\
         "linkType": "HARD"\
       }]\

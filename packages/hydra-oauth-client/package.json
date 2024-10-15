@@ -20,7 +20,7 @@
     "@jest/globals": "29.7.0",
     "@types/cookie": "0.6.0",
     "@types/express": "5.0.0",
-    "@types/node": "20.14.8",
+    "@types/node": "22.7.5",
     "@types/simple-oauth2": "5.0.7",
     "@types/supertest": "6.0.2",
     "express": "5.0.1",
