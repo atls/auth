@@ -38,12 +38,13 @@ describe('authorization code', () => {
     app.use('/login', (req, res) => {
       client.authenticate(req, res)
     })
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
     app.use('/callback', async (req, res): Promise<void> => {
       res.json(await client.verify(req, res))
     })
 
-    app.use('/oauth2/token', (req, res) => res.json({ access_token: true }))
+    app.use('/oauth2/token', (req, res) => {
+      res.json({ access_token: true })
+    })
 
     server = app.listen(port)
     // @ts-expect-error
