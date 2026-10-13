@@ -1,7 +1,7 @@
 import { Configuration } from '@ory/kratos-client'
 import { PublicApi }     from '@ory/kratos-client'
 
-let kratos: PublicApi
+let kratos: PublicApi | undefined
 
 export const getKratosClient = (): PublicApi => {
   if (!kratos) {

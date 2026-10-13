@@ -1,0 +1,3 @@
+releases:
+  "@atls/hydra-oauth-client": patch
+  "@atls/kratos-session": patch
