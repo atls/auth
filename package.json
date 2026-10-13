@@ -2,13 +2,21 @@
   "name": "auth",
   "private": true,
   "license": "BSD 3-Clause",
+  "type": "module",
   "workspaces": [
     "packages/**/*"
   ],
-  "devDependencies": {
-    "@atls/code-runtime": "1.1.0",
-    "@types/node": "20.6.3",
-    "typescript": "5.4.2"
+  "lint-staged": {
+    "*.{yml,yaml,json,md}": "yarn format",
+    "packages/**/*.{js,mjs,cjs,ts,tsx}": [
+      "yarn format",
+      "yarn lint"
+    ]
   },
-  "packageManager": "yarn@4.0.0"
+  "devDependencies": {
+    "@atls/raijin": "latest",
+    "@types/node": "24.19.1",
+    "typescript": "5.9.3"
+  },
+  "packageManager": "yarn@4.18.0"
 }

@@ -7,8 +7,9 @@ import type { HydraAuthorizationCodeResult }        from './hydra-authorization-
 import type { AuthenticationStateOptions }          from './hydra-authorization-code.interfaces.js'
 import type { State }                               from './hydra-authorization-code.interfaces.js'
 
+import { randomBytes }                              from 'node:crypto'
+
 import { AuthorizationCode }                        from 'simple-oauth2'
-import { randomBytes }                              from 'crypto'
 import cookie                                       from 'cookie'
 
 import { serializeState }                           from './state.utils.js'
@@ -49,7 +50,7 @@ export class HydraAuthorizationCodeClient {
   }
 
   getReturnToUrl(req: Request): string | undefined {
-    const query = req.query || req.params
+    const { query } = req
 
     if (query.return_to) {
       return query.return_to as string
@@ -98,20 +99,17 @@ export class HydraAuthorizationCodeClient {
   authenticate(req: Request, res: Response, options: AuthenticationStateOptions = {}): void {
     const params = {
       ...options,
-      // eslint-disable-next-line react/no-is-mounted
       returnTo: this.getReturnToUrl(req),
       nonce: randomBytes(20).toString('hex'),
     }
 
-    // eslint-disable-next-line react/no-is-mounted
     this.setNonce(req, res, params.nonce)
 
-    // eslint-disable-next-line react/no-is-mounted
     res.redirect(this.getAuthorizationUrl(params))
   }
 
   async verify(req: Request, res: Response): Promise<HydraAuthorizationCodeResult> {
-    const query = req.query || req.params
+    const { query } = req
 
     const tokenConfig = {
       redirect_uri: this.redirectUri,
@@ -119,11 +117,9 @@ export class HydraAuthorizationCodeClient {
       scope: query.scope as string,
     }
 
-    // @ts-expect-error
-    const state: State = parseState(query.state) || {}
+    const state: State = parseState(query.state as string) || {}
 
-    // @ts-expect-error
-    const cookies = cookie.parse(req.get('cookie'))
+    const cookies = cookie.parse(req.get('cookie')!)
 
     if (state.nonce !== cookies[HydraAuthorizationCodeClient.NONCE_TOKEN]) {
       throw new Error('Nonce not mutch')
